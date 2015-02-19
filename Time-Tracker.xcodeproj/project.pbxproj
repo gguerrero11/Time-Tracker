@@ -21,6 +21,9 @@
 		7116F79B19421700006C8F06 /* Time_TrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7116F79A19421700006C8F06 /* Time_TrackerTests.m */; };
 		8799E05E1A96884400A228CD /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799E05D1A96884400A228CD /* ListViewController.m */; };
 		8799E0611A9689B000A228CD /* ListTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799E0601A9689B000A228CD /* ListTableViewDataSource.m */; };
+		8799E0641A9695BE00A228CD /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799E0631A9695BE00A228CD /* Project.m */; };
+		8799E0671A96975100A228CD /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799E0661A96975100A228CD /* Entry.m */; };
+		8799E06A1A96996000A228CD /* ProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799E0691A96996000A228CD /* ProjectController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,12 @@
 		8799E05D1A96884400A228CD /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		8799E05F1A9689B000A228CD /* ListTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewDataSource.h; sourceTree = "<group>"; };
 		8799E0601A9689B000A228CD /* ListTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewDataSource.m; sourceTree = "<group>"; };
+		8799E0621A9695BE00A228CD /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
+		8799E0631A9695BE00A228CD /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
+		8799E0651A96975100A228CD /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		8799E0661A96975100A228CD /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		8799E0681A96996000A228CD /* ProjectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectController.h; sourceTree = "<group>"; };
+		8799E0691A96996000A228CD /* ProjectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +128,12 @@
 				8799E0601A9689B000A228CD /* ListTableViewDataSource.m */,
 				8799E05C1A96884400A228CD /* ListViewController.h */,
 				8799E05D1A96884400A228CD /* ListViewController.m */,
+				8799E0621A9695BE00A228CD /* Project.h */,
+				8799E0631A9695BE00A228CD /* Project.m */,
+				8799E0651A96975100A228CD /* Entry.h */,
+				8799E0661A96975100A228CD /* Entry.m */,
+				8799E0681A96996000A228CD /* ProjectController.h */,
+				8799E0691A96996000A228CD /* ProjectController.m */,
 				7116F78719421700006C8F06 /* Images.xcassets */,
 				7116F77C19421700006C8F06 /* Supporting Files */,
 			);
@@ -250,9 +265,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8799E0671A96975100A228CD /* Entry.m in Sources */,
 				7116F78619421700006C8F06 /* TTAppDelegate.m in Sources */,
 				7116F78219421700006C8F06 /* main.m in Sources */,
+				8799E06A1A96996000A228CD /* ProjectController.m in Sources */,
 				8799E0611A9689B000A228CD /* ListTableViewDataSource.m in Sources */,
+				8799E0641A9695BE00A228CD /* Project.m in Sources */,
 				8799E05E1A96884400A228CD /* ListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
