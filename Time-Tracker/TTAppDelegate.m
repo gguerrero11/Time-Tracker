@@ -7,7 +7,7 @@
 //
 
 #import "TTAppDelegate.h"
-
+#import "ListViewController.h"
 @implementation TTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -16,6 +16,13 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    
+    ListViewController *projectTable = [ListViewController new];
+    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:projectTable];
+    
+    self.window.rootViewController = navController;
+    
     return YES;
 }
 
