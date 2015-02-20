@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "DetailTableViewDataSource.h"
 #import "Project.h"
 
 @interface DetailViewController () <UITextFieldDelegate>
@@ -15,9 +16,23 @@
 
 @implementation DetailViewController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.dataSource = [DetailTableViewDataSource new];
+    }
+    return self;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.entryTableView.dataSource = self.dataSource;
+    // Do any additional setup after loading the view from its nib
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
