@@ -16,10 +16,17 @@
     self = [super init];
     if(self){
         self.day = dictionary[dayKey];
+        self.timeIn = dictionary[timeInKey];
+        self.timeOut = dictionary[timeOutkey];
+        self.totalTimeWorked = dictionary[totalTimeWorkedKey];
+        
     }
     
     return 0;
 }
+
+
+
 -(void)addEntry:(Entry*)entry{
     NSMutableArray *mutableAddEntryArray = [[NSMutableArray alloc]initWithArray:self.timeStampsDic];
     [mutableAddEntryArray addObject:entry];

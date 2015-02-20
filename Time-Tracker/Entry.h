@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 static NSString * const dayKey = @"dayKey";
-static NSString * const timeIn = @"timeIn";
-static NSString * const timeOut = @"timeOut";
-static NSString * const totalTimeWorked = @"totalTimeWorked";
+static NSString * const timeInKey = @"timeIn";
+static NSString * const timeOutkey = @"timeOut";
+static NSString * const totalTimeWorkedKey = @"totalTimeWorked";
 
 @interface Entry : NSObject
 @property (nonatomic, strong) NSDate *day;

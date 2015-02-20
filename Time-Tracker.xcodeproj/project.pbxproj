@@ -124,12 +124,9 @@
 			children = (
 				7116F78419421700006C8F06 /* TTAppDelegate.h */,
 				7116F78519421700006C8F06 /* TTAppDelegate.m */,
-				8799E05F1A9689B000A228CD /* ListTableViewDataSource.h */,
-				8799E0601A9689B000A228CD /* ListTableViewDataSource.m */,
-				8799E05C1A96884400A228CD /* ListViewController.h */,
-				8799E05D1A96884400A228CD /* ListViewController.m */,
-				8799E0621A9695BE00A228CD /* Project.h */,
-				8799E0631A9695BE00A228CD /* Project.m */,
+				8799E09D1A97D69E00A228CD /* LisTtableViewDataSource */,
+				8799E09E1A97D6DA00A228CD /* ListViewController */,
+				8799E09F1A97D6EE00A228CD /* Project */,
 				8799E0651A96975100A228CD /* Entry.h */,
 				8799E0661A96975100A228CD /* Entry.m */,
 				8799E0681A96996000A228CD /* ProjectController.h */,
@@ -167,6 +164,33 @@
 				7116F79719421700006C8F06 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8799E09D1A97D69E00A228CD /* LisTtableViewDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				8799E05F1A9689B000A228CD /* ListTableViewDataSource.h */,
+				8799E0601A9689B000A228CD /* ListTableViewDataSource.m */,
+			);
+			name = LisTtableViewDataSource;
+			sourceTree = "<group>";
+		};
+		8799E09E1A97D6DA00A228CD /* ListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8799E05C1A96884400A228CD /* ListViewController.h */,
+				8799E05D1A96884400A228CD /* ListViewController.m */,
+			);
+			name = ListViewController;
+			sourceTree = "<group>";
+		};
+		8799E09F1A97D6EE00A228CD /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				8799E0621A9695BE00A228CD /* Project.h */,
+				8799E0631A9695BE00A228CD /* Project.m */,
+			);
+			name = Project;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

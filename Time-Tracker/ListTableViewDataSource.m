@@ -7,6 +7,7 @@
 //
 
 #import "ListTableViewDataSource.h"
+#import "ProjectController.h"
 
 @implementation ListTableViewDataSource
 
@@ -16,6 +17,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [UITableViewCell new];
+
+    cell.textLabel.text =[[ProjectController sharedInstance].projectsArray[indexPath.row] projectName];
+    
     return cell;
 }
 

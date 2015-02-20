@@ -10,6 +10,7 @@
 static NSString * const projectListKey= @"projectListKey";
 @implementation ProjectController
 
+
 +(ProjectController*)sharedInstance{
     static ProjectController *sharedInstance = nil;
 static dispatch_once_t onceToken;
@@ -20,25 +21,31 @@ dispatch_once(&onceToken, ^{
 }
 
 -(void)addProject:(Project*)project{
+    if(!project){
+        return;
+    }
     NSMutableArray *mutableAddProjectsArray = [[NSMutableArray alloc]initWithArray:self.projectsArray];
     [mutableAddProjectsArray addObject:project];
     self.projectsArray = mutableAddProjectsArray;
 }
 
 -(void)removeProject:(Project*)project{
+    if (!project){
+        return;
+    }
     NSMutableArray *mutableRemoveProjectsArray = [[NSMutableArray alloc]initWithArray:self.projectsArray];
     [mutableRemoveProjectsArray removeObject:project];
     self.projectsArray = mutableRemoveProjectsArray;
 }
 
-
 -(void)loadFromDefaults{
     NSArray *projectDictionaries = [[NSUserDefaults standardUserDefaults] objectForKey:projectListKey];
     NSMutableArray *projectMutableArray = [NSMutableArray new];
     for (NSDictionary *project in projectDictionaries){
-        [projectMutableArray addObject:project]
+        [projectMutableArray addObject:project];
     }
-    
 }
+
+
 
 @end
