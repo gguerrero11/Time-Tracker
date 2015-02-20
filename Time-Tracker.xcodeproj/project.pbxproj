@@ -193,10 +193,10 @@
 			isa = PBXGroup;
 			children = (
 				8799E0621A9695BE00A228CD /* Project.h */,
+				8799E0631A9695BE00A228CD /* Project.m */,
 				8799E0A01A97EBDE00A228CD /* DetailViewController.h */,
 				8799E0A11A97EBDE00A228CD /* DetailViewController.m */,
 				8799E0A21A97EBDE00A228CD /* DetailViewController.xib */,
-				8799E0631A9695BE00A228CD /* Project.m */,
 			);
 			name = Project;
 			sourceTree = "<group>";

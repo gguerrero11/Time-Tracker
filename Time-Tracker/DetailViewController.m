@@ -7,8 +7,9 @@
 //
 
 #import "DetailViewController.h"
+#import "Project.h"
 
-@interface DetailViewController ()
+@interface DetailViewController () <UITextFieldDelegate>
 
 @end
 
@@ -36,8 +37,16 @@
 - (IBAction)reportButton:(id)sender {
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    return YES;
+}
 
+- (void)textFieldDidEndEditing:(UITextField *)textField{
 
+    Project *project = [Project new];
+    project.projectName = textField.text;
+
+}
 /*
 #pragma mark - Navigation
 

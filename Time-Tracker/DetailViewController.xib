@@ -25,6 +25,9 @@
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="43" y="53" width="310" height="30"/>
                     </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="jWj-QR-cUt"/>
+                    </connections>
                 </textField>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rAb-co-vHJ">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
