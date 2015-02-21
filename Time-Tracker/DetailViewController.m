@@ -25,12 +25,18 @@
     return self;
 }
 
+-(void)updateProjectProperty:(Project *)project
+{
+    self.project = project;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.entryTableView.dataSource = self.dataSource;
     // Do any additional setup after loading the view from its nib
+    
+    
     
     
 }

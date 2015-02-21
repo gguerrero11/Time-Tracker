@@ -10,6 +10,6 @@
 #import "ListTableViewDataSource.h"
 
 
-@interface ListViewController : UIViewController
+@interface ListViewController : UIViewController <UITableViewDelegate>
 
 @end

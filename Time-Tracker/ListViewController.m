@@ -8,12 +8,16 @@
 
 #import "ListViewController.h"
 #import "ListTableViewDataSource.h"
+#import "DetailViewController.h"
+#import "ProjectController.h"
 
 
 @interface ListViewController()
 
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) ListTableViewDataSource *dataSource;
+@property (nonatomic,strong) DetailViewController *dvc;
+@property (nonatomic, strong) ProjectController *pController;
 
 @end
 
@@ -26,6 +30,9 @@
     self = [super init];
     if (self){
         self.dataSource = [ListTableViewDataSource new];
+        self.dvc = [DetailViewController new];
+        self.pController = [ProjectController new];
+        
     }
     return self;
 }
@@ -34,6 +41,11 @@
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:self.tableView];
       self.tableView.dataSource = self.dataSource;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [self.dvc updateProjectProperty:self.pController.projectsArray[indexPath.row]] ;
 }
 
 @end
