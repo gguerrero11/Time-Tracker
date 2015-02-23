@@ -45,7 +45,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    [self.dvc updateProjectProperty:self.pController.projectsArray[indexPath.row]] ;
+    [self.dvc updateProjectProperty:self.pController.projectsArray[indexPath.row]];
 }
 
 @end

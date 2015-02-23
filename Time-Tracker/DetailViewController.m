@@ -10,9 +10,10 @@
 #import "DetailTableViewDataSource.h"
 #import "Project.h"
 
+
 @interface DetailViewController () <UITextFieldDelegate>
 
-
+@property (nonatomic, strong) Project *currentProject;
 
 @end
 
@@ -40,41 +41,58 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
+#pragma mark DetailView button's methods
 
 - (IBAction)addCustomEntry:(id)sender {
 }
 
 - (IBAction)checkInButton:(id)sender {
+    [self.currentProject startNewEntry];
+    [self.entryTableView reloadData];
+    
 }
 
 - (IBAction)checkOutButton:(id)sender {
+    [self.currentProject endCurrentEntry];
+    [self.entryTableView reloadData];
+    
 }
 
 - (IBAction)reportButton:(id)sender {
 }
+
+
+#pragma mark UITextField delegates
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     return YES;
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField{
-
+    
     Project *project = [Project new];
     project.projectName = textField.text;
-
+    
 }
+
+
+#pragma mark Misc methods
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

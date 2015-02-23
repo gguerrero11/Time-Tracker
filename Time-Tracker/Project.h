@@ -12,7 +12,9 @@
 @property (nonatomic,strong)NSArray *entries;
 @property (nonatomic, strong) NSString *projectName;
 
-
+-(void)startNewEntry;
+-(void)endCurrentEntry;
 -(void)addEntry;
 -(void)removeEntry;
+
 @end

@@ -13,10 +13,14 @@ static NSString * const timeOutkey = @"timeOut";
 static NSString * const totalTimeWorkedKey = @"totalTimeWorked";
 
 @interface Entry : NSObject
-@property (nonatomic, strong) NSDate *day;
+
 @property (nonatomic, strong) NSArray *timeStampsDic;
+
+@property (nonatomic, strong) NSDate *day;
 @property (nonatomic, strong) NSString *timeIn;
 @property (nonatomic, strong) NSString *timeOut;
 @property (nonatomic, strong) NSString *totalTimeWorked;
+
+-(id)initWithDictionary:(NSDictionary*)dictionary;
 
 @end

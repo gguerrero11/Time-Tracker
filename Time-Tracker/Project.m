@@ -7,8 +7,27 @@
 //
 
 #import "Project.h"
+#import "Entry.h"
+
+@interface Project ()
+
+@property (nonatomic, strong) Entry *currentEntry;
+
+@end
 
 @implementation Project
+
+-(void)startNewEntry {
+    self.currentEntry = [[Entry alloc]initWithDictionary:[NSDictionary new]];
+    // NSDictionary *dictOfEntry = self.currentEntry.
+    [self.currentEntry setValue:[NSDate date] forKey:timeInKey];
+    
+}
+
+-(void)endCurrentEntry {
+    [self.currentEntry setValue:[NSDate date] forKey:timeOutkey];
+}
+
 
 
 -(void)addEntry{
