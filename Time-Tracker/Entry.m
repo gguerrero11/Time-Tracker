@@ -12,17 +12,14 @@
 
 
 -(id)initWithDictionary:(NSDictionary*)dictionary{
-    
     self = [super init];
     if(self){
         self.day = dictionary[dayKey];
         self.timeIn = dictionary[timeInKey];
         self.timeOut = dictionary[timeOutkey];
         self.totalTimeWorked = dictionary[totalTimeWorkedKey];
-        
     }
-    
-    return 0;
+    return self;
 }
 
 

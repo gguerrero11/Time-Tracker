@@ -32,19 +32,29 @@
         self.dataSource = [ListTableViewDataSource new];
         self.dvc = [DetailViewController new];
         self.pController = [ProjectController new];
-        
     }
     return self;
 }
+
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:self.tableView];
-      self.tableView.dataSource = self.dataSource;
+    self.tableView.dataSource = self.dataSource;
+    
+    // Create "+" add button to create new project.
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(add:)];
+    self.navigationItem.rightBarButtonItem = addButton;
 }
 
+- (void)add:(id)sender {
+    self.dvc = [DetailViewController new];
+    [self.tableView reloadData];
+    [self.navigationController pushViewController:self.dvc animated:YES];
+}
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     [self.dvc updateProjectProperty:self.pController.projectsArray[indexPath.row]];
 }
 

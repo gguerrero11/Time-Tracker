@@ -12,13 +12,14 @@
 @implementation ListTableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    return [ProjectController sharedInstance].projectsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [UITableViewCell new];
-
-    cell.textLabel.text =[[ProjectController sharedInstance].projectsArray[indexPath.row] projectName];
+//    ProjectController *projectControllerInstance = [ProjectController sharedInstance];
+    NSArray *arrayOfProjects = [ProjectController sharedInstance].projectsArray[indexPath.row];
+//    cell.textLabel.text = arrayOfProjects
     
     return cell;
 }

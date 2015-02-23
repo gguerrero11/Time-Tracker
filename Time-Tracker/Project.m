@@ -19,7 +19,6 @@
 
 -(void)startNewEntry {
     self.currentEntry = [[Entry alloc]initWithDictionary:[NSDictionary new]];
-    // NSDictionary *dictOfEntry = self.currentEntry.
     [self.currentEntry setValue:[NSDate date] forKey:timeInKey];
     
 }
