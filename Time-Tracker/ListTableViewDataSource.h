@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Project.h"
 
 @interface ListTableViewDataSource : UITableView <UITableViewDataSource,UITabBarDelegate>
+
+@property (nonatomic, strong) Project *projectDataSource;
 
 @end

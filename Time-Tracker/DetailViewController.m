@@ -12,6 +12,8 @@
 
 @interface DetailViewController () <UITextFieldDelegate>
 
+
+
 @end
 
 @implementation DetailViewController
@@ -34,10 +36,7 @@
     [super viewDidLoad];
     
     self.entryTableView.dataSource = self.dataSource;
-    // Do any additional setup after loading the view from its nib
-    
-    
-    
+    self.project = self.dataSource.project;
     
 }
 
