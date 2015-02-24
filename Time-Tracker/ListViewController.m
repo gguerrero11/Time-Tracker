@@ -31,9 +31,14 @@
     if (self){
         self.dataSource = [ListTableViewDataSource new];
         self.dvc = [DetailViewController new];
-        self.pController = [ProjectController new];
+        self.pController = [ProjectController sharedInstance];
     }
     return self;
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 -(void)viewDidLoad{
@@ -41,6 +46,7 @@
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:self.tableView];
     self.tableView.dataSource = self.dataSource;
+    self.tableView.delegate = self;
     
     // Create "+" add button to create new project.
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(add:)];
@@ -48,14 +54,19 @@
 }
 
 - (void)add:(id)sender {
-    self.dvc = [DetailViewController new];
-    [self.tableView reloadData];
+    Project *newProject = [Project new];
+    [[ProjectController sharedInstance]addProject:newProject];
+    [self.dvc updateProjectProperty:newProject];
     [self.navigationController pushViewController:self.dvc animated:YES];
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self.dvc updateProjectProperty:self.pController.projectsArray[indexPath.row]];
+    [self.dvc updateTextField];
+    NSLog(@"%@", [self.pController.projectsArray[indexPath.row] projectName]);
+    [self.navigationController pushViewController:self.dvc animated:YES];
 }
 
 @end

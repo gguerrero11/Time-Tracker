@@ -13,10 +13,10 @@ static NSString * const projectListKey= @"projectListKey";
 
 +(ProjectController*)sharedInstance{
     static ProjectController *sharedInstance = nil;
-static dispatch_once_t onceToken;
-dispatch_once(&onceToken, ^{
-    sharedInstance = [ProjectController new];
-});
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [ProjectController new];
+    });
     return sharedInstance;
 }
 
@@ -27,6 +27,7 @@ dispatch_once(&onceToken, ^{
     NSMutableArray *mutableAddProjectsArray = [[NSMutableArray alloc]initWithArray:self.projectsArray];
     [mutableAddProjectsArray addObject:project];
     self.projectsArray = mutableAddProjectsArray;
+    
 }
 
 -(void)removeProject:(Project*)project{

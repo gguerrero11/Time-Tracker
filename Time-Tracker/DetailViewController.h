@@ -10,16 +10,13 @@
 #import "DetailTableViewDataSource.h"
 #import "Project.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController 
 
-@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
-@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
-@property (weak, nonatomic) IBOutlet UITableView *entryTableView;
-
-@property (strong, nonatomic) DetailTableViewDataSource *dataSource;
 @property (strong, nonatomic) Project *project;
 
 -(void)updateProjectProperty:(Project *)project;
+
+-(void)updateTextField;
 
 
 

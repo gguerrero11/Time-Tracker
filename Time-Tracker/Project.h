@@ -7,14 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Entry.h"
 
 @interface Project : NSObject
-@property (nonatomic,strong)NSArray *entries;
+
+@property (nonatomic,strong) NSArray *entries;
 @property (nonatomic, strong) NSString *projectName;
+@property (nonatomic) NSInteger projectAtIndex;
 
 -(void)startNewEntry;
 -(void)endCurrentEntry;
--(void)addEntry;
+-(void)addEntry:(Entry *)entry;
 -(void)removeEntry;
 
 @end

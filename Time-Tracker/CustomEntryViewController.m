@@ -8,7 +8,7 @@
 
 #import "CustomEntryViewController.h"
 
-@interface CustomEntryViewController ()
+@interface CustomEntryViewController () 
 
 @property (weak, nonatomic) IBOutlet UIDatePicker *startDatePicker;
 @property (weak, nonatomic) IBOutlet UIDatePicker *endDatePicker;

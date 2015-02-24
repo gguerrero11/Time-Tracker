@@ -8,6 +8,13 @@
 
 #import "Entry.h"
 
+@interface Entry ()
+
+
+
+@end
+
+
 @implementation Entry
 
 

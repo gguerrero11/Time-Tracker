@@ -18,20 +18,27 @@
 @implementation Project
 
 -(void)startNewEntry {
-    self.currentEntry = [[Entry alloc]initWithDictionary:[NSDictionary new]];
-    [self.currentEntry setValue:[NSDate date] forKey:timeInKey];
+    Entry *entry = [Entry new];
+    NSLog(@"Logging: %@", [entry.timeStampsDic valueForKey:timeInKey]);
     
+    self.currentEntry = entry;
+    [self addEntry:entry];
 }
 
 -(void)endCurrentEntry {
     [self.currentEntry setValue:[NSDate date] forKey:timeOutkey];
 }
 
-
-
--(void)addEntry{
+-(void)addEntry:(Entry *) entry{
+    if (!entry) {
+        return;
+    }
+    NSMutableArray *mutableEntries = [[NSMutableArray alloc] initWithArray:self.entries];
+    [mutableEntries addObject:entry];
     
+    self.entries = mutableEntries;
 }
+
 -(void)removeEntry{
     
 }
