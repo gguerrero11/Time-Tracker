@@ -16,7 +16,7 @@
 
 @interface DetailViewController () <UITextFieldDelegate, MFMailComposeViewControllerDelegate>
 
-@property (nonatomic, strong) Project *currentProject;
+
 @property (nonatomic, strong) CustomEntryViewController *customEntryVC;
 
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
@@ -24,7 +24,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *entryTableView;
 
 @property (strong, nonatomic) DetailTableViewDataSource *dataSource;
-
 
 @end
 
@@ -39,23 +38,26 @@
 {
     self = [super init];
     if (self) {
-        self.dataSource = [DetailTableViewDataSource new];
+
     }
     return self;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
 }
 
 -(void)updateProjectProperty:(Project *)project
 {
     self.project = project;
+    self.dataSource = [DetailTableViewDataSource new];//alloc]initWithProject:self.project];
+    self.dataSource.project = project;
+    self.entryTableView.dataSource = self.dataSource;
+    [self.entryTableView reloadData];
 }
 
 -(void)updateTextField {
     self.titleTextField.text = self.project.projectName;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.entryTableView.dataSource = self.dataSource;
 }
 
 #pragma mark UITextField delegates

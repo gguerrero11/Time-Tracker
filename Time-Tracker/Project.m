@@ -17,26 +17,28 @@
 
 @implementation Project
 
+-(id)init {
+    self = [super init];
+    self.entries = [NSMutableArray new];
+    return self;
+}
+
 -(void)startNewEntry {
     Entry *entry = [Entry new];
-    NSLog(@"Logging: %@", [entry.timeStampsDic valueForKey:timeInKey]);
-    
+    entry.timeIn = [NSDate date];
     self.currentEntry = entry;
     [self addEntry:entry];
 }
 
 -(void)endCurrentEntry {
-    [self.currentEntry setValue:[NSDate date] forKey:timeOutkey];
+    self.currentEntry.timeOut = [NSDate date];
 }
 
 -(void)addEntry:(Entry *) entry{
     if (!entry) {
         return;
     }
-    NSMutableArray *mutableEntries = [[NSMutableArray alloc] initWithArray:self.entries];
-    [mutableEntries addObject:entry];
-    
-    self.entries = mutableEntries;
+    [self.entries addObject:entry];
 }
 
 -(void)removeEntry{

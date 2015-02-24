@@ -11,7 +11,7 @@
 
 @interface Project : NSObject
 
-@property (nonatomic,strong) NSArray *entries;
+@property (nonatomic,strong) NSMutableArray *entries;
 @property (nonatomic, strong) NSString *projectName;
 @property (nonatomic) NSInteger projectAtIndex;
 

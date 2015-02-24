@@ -12,5 +12,5 @@
 @interface DetailTableViewDataSource : NSObject <UITableViewDataSource>
 @property (nonatomic,strong) Project *project;
 
-
+-(id)initWithProject:(Project *)project;
 @end
