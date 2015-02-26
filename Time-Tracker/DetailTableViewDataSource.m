@@ -37,8 +37,8 @@
     NSString *dateAsString = [dateFormat stringFromDate:entry.timeIn];
  
     // Outputs formatted date to textLabel of cell
-    // cellForTimeStampList.textLabel.text = dateAsString;
-    cellForTimeStampList.textLabel.text = @"Test";
+    cellForTimeStampList.textLabel.text = dateAsString;
+    
     
     return cellForTimeStampList;
 }

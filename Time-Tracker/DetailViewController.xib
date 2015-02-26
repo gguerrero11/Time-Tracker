@@ -7,8 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController">
             <connections>
-                <outlet property="entryTableView" destination="rAb-co-vHJ" id="MNr-Py-RAh"/>
-                <outlet property="timeLabel" destination="13K-a5-JB5" id="ub3-YI-Txd"/>
+                <outlet property="entryTableView" destination="rAb-co-vHJ" id="YNU-Vz-psa"/>
+                <outlet property="timeLabel" destination="13K-a5-JB5" id="Kkn-dz-Chf"/>
                 <outlet property="titleTextField" destination="G4m-vZ-n5G" id="GpQ-Es-i3t"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
