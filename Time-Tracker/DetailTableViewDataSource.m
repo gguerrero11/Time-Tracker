@@ -33,7 +33,7 @@
  
     // Formatting the Date
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"EEE, MM-dd-yyyy, HH:mm"];
+    [dateFormat setDateFormat:@"EEE, MM-dd, HH:mm"];
     NSString *dateAsString = [dateFormat stringFromDate:entry.timeIn];
  
     // Outputs formatted date to textLabel of cell

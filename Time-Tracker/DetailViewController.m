@@ -22,34 +22,43 @@
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UITableView *entryTableView;
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *checkInButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *checkedOutButton;
 @property (strong, nonatomic) DetailTableViewDataSource *dataSource;
 
 @end
 
 @implementation DetailViewController
-
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.entryTableView reloadData];
-}
+//
+//-(void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:animated];
+//}
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-
+        
     }
     return self;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [self checkedOutChecker];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self updateTextField];
+    [self checkedOutChecker];
+    
 }
 
 -(void)updateProjectProperty:(Project *)project
 {
     self.project = project;
+    self.project.checkInEnabled = project.checkInEnabled;
+    self.project.projectName = project.projectName;
     self.dataSource = [DetailTableViewDataSource new];//alloc]initWithProject:self.project];
     self.dataSource.project = project;
     self.entryTableView.dataSource = self.dataSource;
@@ -69,12 +78,9 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     if ([textField.text  isEqual: @""]) {
-        NSString *defaultName = [NSString stringWithFormat:@"Project %ld",[ProjectController sharedInstance].projectsArray.count];
-        self.project.projectName = defaultName;
-        self.titleTextField.text = defaultName;
+        textField.text = self.project.projectName;
     } else {
         self.project.projectName = textField.text;
-        
     }
 }
 
@@ -87,17 +93,31 @@
 }
 
 - (IBAction)checkInButton:(id)sender {
+    
     [self.project startNewEntry];
+    self.project.checkInEnabled = NO;
+    [self checkedOutChecker];
     [self.entryTableView reloadData];
     
 }
 
 - (IBAction)checkOutButton:(id)sender {
     [self.project endCurrentEntry];
+    self.project.checkInEnabled = YES;
+    [self checkedOutChecker];
     [self.entryTableView reloadData];
     
 }
 
+- (void) checkedOutChecker {
+    if (self.project.checkInEnabled == NO) {
+        [self.checkInButton setEnabled:NO];
+        [self.checkedOutButton setEnabled:YES];
+    } else {
+        [self.checkInButton setEnabled:YES];
+        [self.checkedOutButton setEnabled:NO];
+    }
+}
 
 #pragma mark Mail section
 

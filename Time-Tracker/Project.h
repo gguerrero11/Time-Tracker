@@ -14,6 +14,7 @@
 @property (nonatomic,strong) NSMutableArray *entries;
 @property (nonatomic, strong) NSString *projectName;
 @property (nonatomic) NSInteger projectAtIndex;
+@property (nonatomic) BOOL checkInEnabled;
 
 -(void)startNewEntry;
 -(void)endCurrentEntry;
