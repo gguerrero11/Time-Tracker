@@ -8,14 +8,26 @@
 
 #import <Foundation/Foundation.h>
 #import "Project.h"
+#import "Entry.h"
+#import "Stack.h"
+
 @interface ProjectController : NSObject
 
+@property (nonatomic, strong) NSArray *entriesArray;
 @property (nonatomic, strong) NSArray *projectsArray;
-
 @property (nonatomic, strong) NSString *projectName;
 
+@property (nonatomic, strong) Project *currentProject;
+@property (nonatomic, strong) Entry *currentEntry;
+
 +(ProjectController*) sharedInstance;
--(void)addProject:(Project*)project;
+
+-(Project *)addProject;
 -(void)removeProject:(Project*)project;
+
+-(void)startNewEntry;
+-(void)endCurrentEntry;
+-(void)addEntry:(Entry *)entry;
+-(void)removeEntry;
 
 @end

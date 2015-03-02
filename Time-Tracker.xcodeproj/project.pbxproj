@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		494F3B451AA434CB00BF8204 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 494F3B441AA434CB00BF8204 /* Stack.m */; };
+		494F3B481AA434E600BF8204 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 494F3B461AA434E600BF8204 /* Model.xcdatamodeld */; };
+		494F3B4A1AA4360400BF8204 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494F3B491AA4360400BF8204 /* CoreData.framework */; };
+		494F3B5C1AA4400600BF8204 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 494F3B5B1AA4400600BF8204 /* Entry.m */; };
+		494F3B5F1AA4400700BF8204 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 494F3B5E1AA4400700BF8204 /* Project.m */; };
 		49AEE3631A9AF99400A018F9 /* CustomEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AEE3611A9AF99400A018F9 /* CustomEntryViewController.m */; };
 		49AEE3641A9AF99400A018F9 /* CustomEntryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49AEE3621A9AF99400A018F9 /* CustomEntryViewController.xib */; };
 		7116F77619421700006C8F06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7116F77519421700006C8F06 /* Foundation.framework */; };
@@ -23,8 +28,6 @@
 		7116F79B19421700006C8F06 /* Time_TrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7116F79A19421700006C8F06 /* Time_TrackerTests.m */; };
 		8799E05E1A96884400A228CD /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799E05D1A96884400A228CD /* ListViewController.m */; };
 		8799E0611A9689B000A228CD /* ListTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799E0601A9689B000A228CD /* ListTableViewDataSource.m */; };
-		8799E0641A9695BE00A228CD /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799E0631A9695BE00A228CD /* Project.m */; };
-		8799E0671A96975100A228CD /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799E0661A96975100A228CD /* Entry.m */; };
 		8799E06A1A96996000A228CD /* ProjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799E0691A96996000A228CD /* ProjectController.m */; };
 		8799E0A31A97EBDE00A228CD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799E0A11A97EBDE00A228CD /* DetailViewController.m */; };
 		8799E0A41A97EBDE00A228CD /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8799E0A21A97EBDE00A228CD /* DetailViewController.xib */; };
@@ -42,6 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		494F3B431AA434CB00BF8204 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		494F3B441AA434CB00BF8204 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		494F3B471AA434E600BF8204 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		494F3B491AA4360400BF8204 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		494F3B5A1AA4400600BF8204 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		494F3B5B1AA4400600BF8204 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		494F3B5D1AA4400700BF8204 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
+		494F3B5E1AA4400700BF8204 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 		49AEE3601A9AF99400A018F9 /* CustomEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEntryViewController.h; sourceTree = "<group>"; };
 		49AEE3611A9AF99400A018F9 /* CustomEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomEntryViewController.m; sourceTree = "<group>"; };
 		49AEE3621A9AF99400A018F9 /* CustomEntryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomEntryViewController.xib; sourceTree = "<group>"; };
@@ -65,10 +76,6 @@
 		8799E05D1A96884400A228CD /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		8799E05F1A9689B000A228CD /* ListTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewDataSource.h; sourceTree = "<group>"; };
 		8799E0601A9689B000A228CD /* ListTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewDataSource.m; sourceTree = "<group>"; };
-		8799E0621A9695BE00A228CD /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
-		8799E0631A9695BE00A228CD /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
-		8799E0651A96975100A228CD /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
-		8799E0661A96975100A228CD /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
 		8799E0681A96996000A228CD /* ProjectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectController.h; sourceTree = "<group>"; };
 		8799E0691A96996000A228CD /* ProjectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectController.m; sourceTree = "<group>"; };
 		8799E0A01A97EBDE00A228CD /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -83,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				494F3B4A1AA4360400BF8204 /* CoreData.framework in Frameworks */,
 				7116F77819421700006C8F06 /* CoreGraphics.framework in Frameworks */,
 				7116F77A19421700006C8F06 /* UIKit.framework in Frameworks */,
 				7116F77619421700006C8F06 /* Foundation.framework in Frameworks */,
@@ -124,6 +132,7 @@
 		7116F77419421700006C8F06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				494F3B491AA4360400BF8204 /* CoreData.framework */,
 				7116F77519421700006C8F06 /* Foundation.framework */,
 				7116F77719421700006C8F06 /* CoreGraphics.framework */,
 				7116F77919421700006C8F06 /* UIKit.framework */,
@@ -135,12 +144,12 @@
 		7116F77B19421700006C8F06 /* Time-Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				494F3B431AA434CB00BF8204 /* Stack.h */,
+				494F3B441AA434CB00BF8204 /* Stack.m */,
 				7116F78419421700006C8F06 /* TTAppDelegate.h */,
 				7116F78519421700006C8F06 /* TTAppDelegate.m */,
 				8799E09E1A97D6DA00A228CD /* ListViewController */,
 				8799E0A81A97F40D00A228CD /* DetailViewController */,
-				8799E0651A96975100A228CD /* Entry.h */,
-				8799E0661A96975100A228CD /* Entry.m */,
 				8799E09F1A97D6EE00A228CD /* Project */,
 				7116F78719421700006C8F06 /* Images.xcassets */,
 				7116F77C19421700006C8F06 /* Supporting Files */,
@@ -191,8 +200,11 @@
 		8799E09F1A97D6EE00A228CD /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				8799E0621A9695BE00A228CD /* Project.h */,
-				8799E0631A9695BE00A228CD /* Project.m */,
+				494F3B461AA434E600BF8204 /* Model.xcdatamodeld */,
+				494F3B5D1AA4400700BF8204 /* Project.h */,
+				494F3B5E1AA4400700BF8204 /* Project.m */,
+				494F3B5A1AA4400600BF8204 /* Entry.h */,
+				494F3B5B1AA4400600BF8204 /* Entry.m */,
 				8799E0681A96996000A228CD /* ProjectController.h */,
 				8799E0691A96996000A228CD /* ProjectController.m */,
 			);
@@ -312,16 +324,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8799E0671A96975100A228CD /* Entry.m in Sources */,
 				7116F78619421700006C8F06 /* TTAppDelegate.m in Sources */,
 				7116F78219421700006C8F06 /* main.m in Sources */,
 				8799E0A31A97EBDE00A228CD /* DetailViewController.m in Sources */,
+				494F3B5F1AA4400700BF8204 /* Project.m in Sources */,
+				494F3B5C1AA4400600BF8204 /* Entry.m in Sources */,
 				49AEE3631A9AF99400A018F9 /* CustomEntryViewController.m in Sources */,
 				8799E06A1A96996000A228CD /* ProjectController.m in Sources */,
 				8799E0611A9689B000A228CD /* ListTableViewDataSource.m in Sources */,
 				8799E0A71A97F40100A228CD /* DetailTableViewDataSource.m in Sources */,
-				8799E0641A9695BE00A228CD /* Project.m in Sources */,
+				494F3B451AA434CB00BF8204 /* Stack.m in Sources */,
 				8799E05E1A96884400A228CD /* ListViewController.m in Sources */,
+				494F3B481AA434E600BF8204 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +544,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		494F3B461AA434E600BF8204 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				494F3B471AA434E600BF8204 /* Model.xcdatamodel */,
+			);
+			currentVersion = 494F3B471AA434E600BF8204 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = ../Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7116F76A19421700006C8F06 /* Project object */;
 }

@@ -28,7 +28,7 @@
    
     // Creating the cell
     UITableViewCell *cellForTimeStampList = [UITableViewCell new];
-    NSArray *arrayOfEntriesInAProject = self.project.entries;
+    NSArray *arrayOfEntriesInAProject = [ProjectController sharedInstance].entriesArray;
     Entry *entry = arrayOfEntriesInAProject[indexPath.row];
  
     // Formatting the Date

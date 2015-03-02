@@ -54,13 +54,9 @@
 }
 
 - (void)add:(id)sender {
-    Project *newProject = [Project new];
-    NSString *defaultName = [NSString stringWithFormat:@"Project %ld",[ProjectController sharedInstance].projectsArray.count+1];
-    newProject.projectName = defaultName;
-    newProject.checkInEnabled = YES;
-    [[ProjectController sharedInstance]addProject:newProject];
+    [[ProjectController sharedInstance] addProject];
     self.dvc = [DetailViewController new];
-    [self.dvc updateProjectProperty:newProject];
+    [self.dvc updateProjectProperty:[ProjectController sharedInstance].currentProject];
     [self.navigationController pushViewController:self.dvc animated:YES];
 }
 

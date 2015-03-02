@@ -2,25 +2,19 @@
 //  Entry.h
 //  Time-Tracker
 //
-//  Created by Gamaliel Tellez on 2/19/15.
+//  Created by Gabriel Guerrero on 3/1/15.
 //  Copyright (c) 2015 DevMountain. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-static NSString * const timeInKey = @"timeIn";
-static NSString * const timeOutkey = @"timeOut";
+@class Project;
 
+@interface Entry : NSManagedObject
 
-@interface Entry : NSObject
-
-
-@property (nonatomic, strong) NSDate *timeIn;
-@property (nonatomic, strong) NSDate *timeOut;
-
-
--(id)initWithDictionary:(NSDictionary*)dictionary;
-
--(NSDictionary *)entryDictionary;
+@property (nonatomic, retain) NSDate * timeIn;
+@property (nonatomic, retain) NSDate * timeOut;
+@property (nonatomic, retain) Project *project;
 
 @end

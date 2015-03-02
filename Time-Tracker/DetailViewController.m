@@ -94,16 +94,16 @@
 
 - (IBAction)checkInButton:(id)sender {
     
-    [self.project startNewEntry];
-    self.project.checkInEnabled = NO;
+    [[ProjectController sharedInstance] startNewEntry];
+    self.project.checkInEnabled = @0;
     [self checkedOutChecker];
     [self.entryTableView reloadData];
     
 }
 
 - (IBAction)checkOutButton:(id)sender {
-    [self.project endCurrentEntry];
-    self.project.checkInEnabled = YES;
+    [[ProjectController sharedInstance] endCurrentEntry];
+    self.project.checkInEnabled = @1;
     [self checkedOutChecker];
     [self.entryTableView reloadData];
     

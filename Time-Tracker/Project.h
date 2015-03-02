@@ -2,23 +2,32 @@
 //  Project.h
 //  Time-Tracker
 //
-//  Created by Gamaliel Tellez on 2/19/15.
+//  Created by Gabriel Guerrero on 3/1/15.
 //  Copyright (c) 2015 DevMountain. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "Entry.h"
+#import <CoreData/CoreData.h>
 
-@interface Project : NSObject
+@class Entry;
 
-@property (nonatomic,strong) NSMutableArray *entries;
-@property (nonatomic, strong) NSString *projectName;
-@property (nonatomic) NSInteger projectAtIndex;
-@property (nonatomic) BOOL checkInEnabled;
+@interface Project : NSManagedObject
 
--(void)startNewEntry;
--(void)endCurrentEntry;
--(void)addEntry:(Entry *)entry;
--(void)removeEntry;
+@property (nonatomic, retain) NSNumber * checkInEnabled;
+@property (nonatomic, retain) NSString * projectName;
+@property (nonatomic, retain) NSOrderedSet *entries;
+@end
 
+@interface Project (CoreDataGeneratedAccessors)
+
+- (void)insertObject:(Entry *)value inEntriesAtIndex:(NSUInteger)idx;
+- (void)removeObjectFromEntriesAtIndex:(NSUInteger)idx;
+- (void)insertEntries:(NSArray *)value atIndexes:(NSIndexSet *)indexes;
+- (void)removeEntriesAtIndexes:(NSIndexSet *)indexes;
+- (void)replaceObjectInEntriesAtIndex:(NSUInteger)idx withObject:(Entry *)value;
+- (void)replaceEntriesAtIndexes:(NSIndexSet *)indexes withEntries:(NSArray *)values;
+- (void)addEntriesObject:(Entry *)value;
+- (void)removeEntriesObject:(Entry *)value;
+- (void)addEntries:(NSOrderedSet *)values;
+- (void)removeEntries:(NSOrderedSet *)values;
 @end
